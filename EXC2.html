@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom exercise 2</title>
+</head>
+<style>
+
+    .thebody{
+        margin-top:13%;
+        background-color:red;
+        text-align:center;
+    }
+    .LoveQuestion{
+        
+        color:white;
+        font-size: 150%;
+    }
+    .TheQuestionIs{
+        text-align: center;
+        font-size: 300%;
+        color:white
+        
+    }
+    .SelectAnswer{
+        margin-top: 1%;
+        background-color:rgb(231, 108, 215);
+        font-size:120%;
+    }
+
+</style>
+
+
+<body class="thebody">
+   <label class="LoveQuestion">Do you love me?</label><br> 
+   <select type="text" class="SelectAnswer" onchange="AnswerSelected()">
+       <option>i love you</option>
+       <option>i love you so much</option>
+   </select>
+<div class="TheQuestionIs"></div>
+
+<script>
+const SelectAnswer = document.querySelector('select.SelectAnswer')
+const TheQuestionIs = document.querySelector('.TheQuestionIs')
+function AnswerSelected(){
+    TheQuestionIs.innerHTML =  SelectAnswer.value
+}
+console.log(SelectAnswer)
+
+</script>
+</body>
+</html>
