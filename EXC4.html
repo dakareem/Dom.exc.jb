@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Exercise 4</title>
+</head>
+<style>
+    .thebody{
+        margin-top:10%;
+        margin-left: 37%;
+    }
+ 
+.red{
+    background-color:rgb(233, 103, 103);
+    font-size:200%;
+    color:white;
+}
+.green{
+    background-color:rgb(64, 224, 112);
+    font-size:200%;
+    float:left;
+}
+.yellow{
+    background-color:rgb(211, 224, 92);
+    font-size:200%;
+    float:left;
+}
+.blue{
+    background-color:rgb(51, 28, 180);
+    font-size:200%;
+    color:white;
+    float:left;
+}
+
+</style>
+<body class="thebody">
+<button class="red" onclick="changeToRed()">red</button>
+<button class="green" onclick="changeToGreen()">green</button>
+<button class="yellow" onclick="changeToYellow()">yellow</button>
+<button class="blue" onclick="changeToBlue()">blue</button>
+</body>
+<script>
+
+    const redcolor = document.getElementsByClassName("red");
+function changeToRed(){
+    document.body.style.backgroundColor="red";
+}
+
+const greencolor = document.getElementsByClassName("green");
+function changeToGreen(){
+    document.body.style.backgroundColor="green";
+}
+
+const yellowcolor = document.getElementsByClassName("yellow");
+function changeToYellow(){
+    document.body.style.backgroundColor="yellow";
+}
+
+const bluecolor = document.getElementsByClassName("blue");
+function changeToBlue(){
+    document.body.style.backgroundColor="blue";
+}
+</script>
+</html>
