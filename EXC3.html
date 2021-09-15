@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom exercise 3</title>
+</head>
+<body class="thebody">
+<style>
+    .thebody{
+        text-align:center;
+    }
+
+.btn{
+    background-color:rgb(32, 212, 62);
+    margin-top: 10%;
+    font-size:150%;
+    font-family:monospace;
+}
+    
+</style>
+
+<button class="btn" onclick="ChangeTheColor()">Click me to change the background color!</button>
+
+<script>
+
+const btn = document.getElementsByClassName('btn');
+      function ChangeTheColor(){
+         document.body.style.backgroundColor = "lightblue"; 
+}
+</script>
+
+</body>
+</html>
