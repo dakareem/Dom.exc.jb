@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- 
+; תרגיל מספר 1 : תוכנית שמציגה כפתור עליו כתוב "הזמן" וברגע שנלחץ על הכפתור
+; תוצג לי הודעה "מצטערים, המוצר אזל מהמלאי." -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .thebody {
+        background-color:rgb(138, 189, 231);
+    }
+    .button {
+        background-color:green;
+        color:white;
+        font-size:large;
+        margin-left:45%;
+        margin-top:10%;
+    }
+
+    .paragraph {
+        text-align:center;
+        color:red;
+        font-size: 150%;
+        font-family:'Times New Roman', Times, serif;
+    }
+</style>
+<body class="thebody">
+<button onclick="myFunction()" class="button">click to order</button>
+<p id="p1" class="paragraph"></p>
+<script>
+function myFunction(){
+    document.getElementById("p1").innerHTML = "SORRY! this product is out of stock";
+}
+</script>
+</body>
+</html>
