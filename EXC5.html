@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom exercise 5</title>
+</head>
+<style>
+    .thebody{
+        background-color:cornflowerblue;
+        text-align:center;
+        margin-top:10%;
+    }
+    .addOne{
+        padding:14px 18px;
+        transition-duration: 0.4s;
+    }
+    .addOne:hover{
+        background-color: #4CAF50;
+        color: white;
+        font-size:250%;
+    }
+    .removeOne{
+        padding:14px 18px;
+        transition-duration: 0.4s;
+    }
+    .removeOne:hover{
+        background-color: #4CAF50;
+        color: white;
+        font-size:250%;
+    }
+    .result{
+        font-size:250%; 
+    }
+
+</style>
+<body class="thebody">
+    <button class="addOne" onclick="add()">+</button>
+    <button class="removeOne" onclick="remove()">-</button><br>
+    <span class="result">0</span>
+<script>
+    const thenResultIs = document.querySelector('span.result')
+    function add(){
+        thenResultIs.innerHTML++
+    }
+    function remove(){
+        thenResultIs.innerHTML--  
+    }
+</script>
+</body>
+</html>
