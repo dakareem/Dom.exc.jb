@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom exercise 6</title>
+</head>
+<style>
+    .EnterEmail{
+        font-family:cursive;
+    }
+    .thebody{
+        background-color: burlywood;
+        text-align:center;
+    }
+    .emailinput{
+font-size: 18px;
+    }
+    .available-not{
+        font-size:200%;
+        font-family:cursive;
+    }
+    .btn{
+font-size: 95%;
+font-family:cursive;
+    }
+</style>
+<body class="thebody">
+    <h1 class="EnterEmail">Enter email</h1>
+    <input class="emailinput" type="text"/>
+    <button onclick="checkAvailability()" class="btn">check availability</button><br>
+    <label class="available-not"></label>
+        <script>
+            const emailList = [
+                'example.1.@gmail.com','example.2.@gmail.com','example.3.@gmail.com'
+            ]
+            const inputRef = document.querySelector('input')
+    function doesEmailExist(arr, email){
+          for(let i = 0; i< arr.length; i++){
+          if(arr[i] === email){
+            return true
+             }
+            }
+               return false
+           }
+
+function checkAvailability() {
+    const email = inputRef.value
+    const exists = doesEmailExist(emailList, email)
+    const labelRef = document.querySelector('label')
+    labelRef.innerHTML = exists ? 'not available': 'available'
+}
+
+         </script>
+</body>
+</html>
